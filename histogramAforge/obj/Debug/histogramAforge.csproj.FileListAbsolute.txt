@@ -1,0 +1,69 @@
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\histogramAforge.exe.config
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\histogramAforge.exe
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\histogramAforge.pdb
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\obj\Debug\histogramAforge.csprojResolveAssemblyReference.cache
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\obj\Debug\histogramAforge.Form1.resources
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\obj\Debug\histogramAforge.Properties.Resources.resources
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\obj\Debug\histogramAforge.csproj.GenerateResource.Cache
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\obj\Debug\histogramAforge.exe
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\obj\Debug\histogramAforge.pdb
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Controls.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.DebuggerVisualizers (2010).dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Fuzzy.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Genetic.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Imaging.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Imaging.Formats.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Imaging.IPPrototyper.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.MachineLearning.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Math.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Neuro.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Robotics.Lego.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Robotics.Surveyor.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Robotics.TeRK.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.DirectShow.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.FFMPEG.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.Kinect.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.VFW.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.Ximea.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Vision.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Controls.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Fuzzy.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Genetic.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Imaging.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Imaging.Formats.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.MachineLearning.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Math.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Neuro.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Robotics.Lego.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Robotics.Surveyor.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Robotics.TeRK.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.DirectShow.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.FFMPEG.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.Kinect.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.VFW.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Video.Ximea.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\AForge.Vision.xml
+c:\users\kryst\documents\visual studio 2015\Projects\histogramAforge\histogramAforge\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.xml
+C:\Users\Rafał Górny\Desktop\odKrysta\histogramAforge\histogramAforge\bin\Debug\histogramAforge.exe.config
+C:\Users\Rafał Górny\Desktop\odKrysta\histogramAforge\histogramAforge\bin\Debug\histogramAforge.exe
+C:\Users\Rafał Górny\Desktop\odKrysta\histogramAforge\histogramAforge\bin\Debug\histogramAforge.pdb
+C:\Users\Rafał Górny\Desktop\odKrysta\histogramAforge\histogramAforge\obj\Debug\histogramAforge.csprojResolveAssemblyReference.cache
+C:\Users\Rafał Górny\Desktop\odKrysta\histogramAforge\histogramAforge\obj\Debug\histogramAforge.Form1.resources
+C:\Users\Rafał Górny\Desktop\odKrysta\histogramAforge\histogramAforge\obj\Debug\histogramAforge.Properties.Resources.resources
+C:\Users\Rafał Górny\Desktop\odKrysta\histogramAforge\histogramAforge\obj\Debug\histogramAforge.csproj.GenerateResource.Cache
+C:\Users\Rafał Górny\Desktop\odKrysta\histogramAforge\histogramAforge\obj\Debug\histogramAforge.exe
+C:\Users\Rafał Górny\Desktop\odKrysta\histogramAforge\histogramAforge\obj\Debug\histogramAforge.pdb
+C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\bin\Debug\histogramAforge.exe.config
+C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\bin\Debug\histogramAforge.exe
+C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\bin\Debug\histogramAforge.pdb
+C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\obj\Debug\histogramAforge.csprojResolveAssemblyReference.cache
+C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\obj\Debug\histogramAforge.Form1.resources
+C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\obj\Debug\histogramAforge.Properties.Resources.resources
+C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\obj\Debug\histogramAforge.csproj.GenerateResource.Cache
+C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\obj\Debug\histogramAforge.exe
+C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\obj\Debug\histogramAforge.pdb
