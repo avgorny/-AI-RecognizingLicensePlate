@@ -67,3 +67,12 @@ C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\obj\
 C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\obj\Debug\histogramAforge.csproj.GenerateResource.Cache
 C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\obj\Debug\histogramAforge.exe
 C:\Users\Rafał Górny\Documents\AI_Projekt_Czytanie_Tablic\histogramAforge\obj\Debug\histogramAforge.pdb
+C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\bin\Debug\histogramAforge.exe.config
+C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\bin\Debug\histogramAforge.exe
+C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\bin\Debug\histogramAforge.pdb
+C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\obj\Debug\histogramAforge.csprojResolveAssemblyReference.cache
+C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\obj\Debug\histogramAforge.Form1.resources
+C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\obj\Debug\histogramAforge.Properties.Resources.resources
+C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\obj\Debug\histogramAforge.csproj.GenerateResource.Cache
+C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\obj\Debug\histogramAforge.exe
+C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\obj\Debug\histogramAforge.pdb

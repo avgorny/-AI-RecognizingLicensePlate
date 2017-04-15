@@ -150,6 +150,7 @@ namespace histogramAforge
                     flagaKoniec = true;
                 }
             }
+            //aprawdzenie czy mamy jakiś początek i koniec, zapisanie nowego obrazka
             if (start != 0 && koniec != 0)
             {
                 Crop filter = new Crop(new Rectangle(0, start, largeCharacter.Width, koniec - start));
