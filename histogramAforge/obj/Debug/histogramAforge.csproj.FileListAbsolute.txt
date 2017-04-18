@@ -76,3 +76,54 @@ C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\obj
 C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\obj\Debug\histogramAforge.csproj.GenerateResource.Cache
 C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\obj\Debug\histogramAforge.exe
 C:\Users\Rafał Górny\Documents\-AI-RecognizingLicensePlate\histogramAforge\obj\Debug\histogramAforge.pdb
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\histogramAforge.exe.config
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\obj\Debug\histogramAforge.exe
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\obj\Debug\histogramAforge.pdb
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\histogramAforge.exe
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\histogramAforge.pdb
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Controls.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.DebuggerVisualizers (2010).dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Fuzzy.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Genetic.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Imaging.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Imaging.Formats.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Imaging.IPPrototyper.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.MachineLearning.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Math.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Neuro.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Robotics.Lego.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Robotics.Surveyor.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Robotics.TeRK.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.DirectShow.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.FFMPEG.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.Kinect.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.VFW.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.Ximea.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Vision.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Controls.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Fuzzy.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Genetic.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Imaging.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Imaging.Formats.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.MachineLearning.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Math.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Neuro.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Robotics.Lego.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Robotics.Surveyor.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Robotics.TeRK.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.DirectShow.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.FFMPEG.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.Kinect.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.VFW.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Video.Ximea.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\AForge.Vision.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.xml
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\obj\Debug\histogramAforge.csprojResolveAssemblyReference.cache
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\obj\Debug\histogramAforge.Form1.resources
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\obj\Debug\histogramAforge.Properties.Resources.resources
+D:\Materiały studia\3 rok\AI\Projekt\histogramAforge\obj\Debug\histogramAforge.csproj.GenerateResource.Cache
