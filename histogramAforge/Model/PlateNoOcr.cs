@@ -185,7 +185,7 @@ namespace ocr
             patterns = learningData.GetLength(0);
             
             AForge.Neuro.ActivationNetwork neuralNet =
-                new AForge.Neuro.ActivationNetwork(new AForge.Neuro.BipolarSigmoidFunction(1.0), patternSize, patterns, patterns, patterns);
+                new AForge.Neuro.ActivationNetwork(new AForge.Neuro.BipolarSigmoidFunction(0.75), patternSize, patterns, patterns);
             // randomize network`s weights
             neuralNet.Randomize();
 
@@ -205,11 +205,16 @@ namespace ocr
                 Console.WriteLine(error);
                 i++;
             }
-            while (error > 0.5);
+            while (error > 0.05);
             Network = neuralNet;
             return i;   
         }
 
+        /// <summary>
+        /// OCR Bitmap with one character using teached neural network
+        /// </summary>
+        /// <param name="mBitmap"></param>
+        /// <returns></returns>
         public int OcrImage(Bitmap mBitmap)
         {
                                    
@@ -244,6 +249,8 @@ namespace ocr
             List<PointsStartEnd> PointsList = CreatePointsTable(mBitmap);
             foreach (PointsStartEnd pointSet in PointsList)
             {
+                //tu jest kłopot czasem dostaje za dużo punktów i wychodzi siatka 5x8 patrz CreatePointsTable
+                //zdecydowanie do poprawy, powoduje błedy typu Z odczytane jako 7
                 if (i < 35)
                 {
                     result[i] = CountBlackWhite(pointSet, mBitmap);
@@ -285,7 +292,12 @@ namespace ocr
             return list;
         }
 
-
+        /// <summary>
+        /// This method returns coverage with blacke points on one squre defined by points
+        /// </summary>
+        /// <param name="pointSet"></param>
+        /// <param name="bitMap"></param>
+        /// <returns></returns>
         private double CountBlackWhite(PointsStartEnd pointSet, Bitmap bitMap)
         {
             double result = 0;
@@ -315,7 +327,10 @@ namespace ocr
             return result;
         }
 
-
+        /// <summary>
+        /// This method is preparing Learning Matrix basis on image from LearningPictures
+        /// </summary>
+        /// <returns></returns>
         private double[][] CreateLearningMatrix()
         {
             //loading and cuting learning matrix for each character
@@ -350,8 +365,7 @@ namespace ocr
         {
             //first dimension size
             int size1 = learningTable.GetLength(0);            
-            double[][] expectedOutputs = new double[size1][];
-            
+            double[][] expectedOutputs = new double[size1][];            
             for(int index = 0; index<size1;index++)
             {
                 expectedOutputs[index] = new double[size1];
@@ -396,6 +410,11 @@ namespace ocr
             }
         }
 
+        /// <summary>
+        /// Create a String format of plate basis on output from NN
+        /// </summary>
+        /// <param name="neuralOutputs"></param>
+        /// <returns></returns>
         public string CreateFullResult(List<int> neuralOutputs)
         {
             if(resultDictionary.Count<10)

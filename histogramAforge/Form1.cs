@@ -53,7 +53,6 @@ namespace histogramAforge
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 pictureBox1.Image = (Bitmap)System.Drawing.Image.FromFile(openFileDialog1.FileName);
-
                 Bitmap imageSecond;
                 imageSecond = (Bitmap)System.Drawing.Image.FromFile(openFileDialog1.FileName);
                 Grayscale greyScaleFilter = new Grayscale(1.0, 0.0, 0.0);

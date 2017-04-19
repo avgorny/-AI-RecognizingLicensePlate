@@ -66,7 +66,6 @@ namespace histogramAforge.Model
             int second = 0;
             Boolean check = false;
             Boolean Bcheck = false;
-
             Boolean setSecond = false;
 
             for (int x = startX; x < myBitmap.Width; x++)
@@ -88,7 +87,7 @@ namespace histogramAforge.Model
                     {
                         blackCount++;
                     }
-
+                    //TODO tu jest problem z ilością białych pkt. ile powinno być aby zdefiniowac że to już biała przerwa?
                     if (count > myBitmap.Height * 0.85)
                     {
                         Bcheck = true;
@@ -195,6 +194,8 @@ namespace histogramAforge.Model
             
         }
 
+        #region copy of proces image for learnin image
+
         public List<Bitmap> ProcesLearningImage(Bitmap WhieteAndBlackImage)
         {
             int startX = 0;
@@ -291,5 +292,6 @@ namespace histogramAforge.Model
             return second;
 
         }
+        #endregion
     }
 }
