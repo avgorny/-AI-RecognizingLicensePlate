@@ -54,7 +54,6 @@ namespace histogramAforge
                 CharactersList = graphicProcesing.ProcesImage(imageSecond);
 
 
-
             }
         }
 
@@ -78,6 +77,18 @@ namespace histogramAforge
             {
                 OcrPlatesResult.Text += plateOCR.OcrImage(map);
             }
+        }
+
+        private void saveNetworkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PlateNoOcr plateOCR = PlateNoOcr.Instance;
+            plateOCR.SerializeNetwork();
+        }
+
+        private void loadNetworkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PlateNoOcr plateOCR = PlateNoOcr.Instance;
+            plateOCR.LoadSerializedNetwork();
         }
     }
 

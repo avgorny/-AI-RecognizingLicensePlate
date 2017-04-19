@@ -39,10 +39,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.teachStatuslabel = new System.Windows.Forms.Label();
-            this.TeachNetworkButton = new System.Windows.Forms.Button();
             this.OCRButton = new System.Windows.Forms.Button();
             this.OcrPlatesResult = new System.Windows.Forms.Label();
+            this.teachStatuslabel = new System.Windows.Forms.Label();
+            this.TeachNetworkButton = new System.Windows.Forms.Button();
+            this.saveNetworkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadNetworkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,7 +67,9 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openToolStripMenuItem});
+            this.openToolStripMenuItem,
+            this.saveNetworkToolStripMenuItem,
+            this.loadNetworkToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -73,7 +77,7 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -150,6 +154,26 @@
             this.panel1.Size = new System.Drawing.Size(739, 76);
             this.panel1.TabIndex = 5;
             // 
+            // OCRButton
+            // 
+            this.OCRButton.Location = new System.Drawing.Point(3, 37);
+            this.OCRButton.Name = "OCRButton";
+            this.OCRButton.Size = new System.Drawing.Size(363, 27);
+            this.OCRButton.TabIndex = 2;
+            this.OCRButton.Text = "OCR Image";
+            this.OCRButton.UseVisualStyleBackColor = true;
+            this.OCRButton.Click += new System.EventHandler(this.OCRButton_Click);
+            // 
+            // OcrPlatesResult
+            // 
+            this.OcrPlatesResult.AutoSize = true;
+            this.OcrPlatesResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.OcrPlatesResult.Location = new System.Drawing.Point(382, 39);
+            this.OcrPlatesResult.Name = "OcrPlatesResult";
+            this.OcrPlatesResult.Size = new System.Drawing.Size(0, 20);
+            this.OcrPlatesResult.TabIndex = 1;
+            this.OcrPlatesResult.Click += new System.EventHandler(this.label1_Click);
+            // 
             // teachStatuslabel
             // 
             this.teachStatuslabel.AutoSize = true;
@@ -171,25 +195,19 @@
             this.TeachNetworkButton.UseVisualStyleBackColor = true;
             this.TeachNetworkButton.Click += new System.EventHandler(this.TeachNetworkButton_Click);
             // 
-            // OCRButton
+            // saveNetworkToolStripMenuItem
             // 
-            this.OCRButton.Location = new System.Drawing.Point(3, 37);
-            this.OCRButton.Name = "OCRButton";
-            this.OCRButton.Size = new System.Drawing.Size(363, 27);
-            this.OCRButton.TabIndex = 2;
-            this.OCRButton.Text = "OCR Image";
-            this.OCRButton.UseVisualStyleBackColor = true;
-            this.OCRButton.Click += new System.EventHandler(this.OCRButton_Click);
+            this.saveNetworkToolStripMenuItem.Name = "saveNetworkToolStripMenuItem";
+            this.saveNetworkToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveNetworkToolStripMenuItem.Text = "Save network";
+            this.saveNetworkToolStripMenuItem.Click += new System.EventHandler(this.saveNetworkToolStripMenuItem_Click);
             // 
-            // OcrPlatesResult
+            // loadNetworkToolStripMenuItem
             // 
-            this.OcrPlatesResult.AutoSize = true;
-            this.OcrPlatesResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.OcrPlatesResult.Location = new System.Drawing.Point(382, 39);
-            this.OcrPlatesResult.Name = "OcrPlatesResult";
-            this.OcrPlatesResult.Size = new System.Drawing.Size(0, 20);
-            this.OcrPlatesResult.TabIndex = 1;
-            this.OcrPlatesResult.Click += new System.EventHandler(this.label1_Click);
+            this.loadNetworkToolStripMenuItem.Name = "loadNetworkToolStripMenuItem";
+            this.loadNetworkToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadNetworkToolStripMenuItem.Text = "Load network";
+            this.loadNetworkToolStripMenuItem.Click += new System.EventHandler(this.loadNetworkToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -232,6 +250,8 @@
         private System.Windows.Forms.Button TeachNetworkButton;
         private System.Windows.Forms.Button OCRButton;
         private System.Windows.Forms.Label OcrPlatesResult;
+        private System.Windows.Forms.ToolStripMenuItem saveNetworkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadNetworkToolStripMenuItem;
     }
 }
 
