@@ -26,17 +26,29 @@ namespace histogramAforge
         //public Bitmap CharactersList;
 
         public List<Bitmap> CharactersList = new List<Bitmap>();
+        public List<PictureBox> pictureBoxList = new List<PictureBox>();
+
 
         public Form1()
         {
             InitializeComponent();
-            
+            //Saving picture boxes to list
+            pictureBoxList.Add(pictureBox3);
+            pictureBoxList.Add(pictureBox4);
+            pictureBoxList.Add(pictureBox5);
+            pictureBoxList.Add(pictureBox6);
+            pictureBoxList.Add(pictureBox7);
+            pictureBoxList.Add(pictureBox8);
+            pictureBoxList.Add(pictureBox9);
+            pictureBoxList.Add(pictureBox10);
+
         }
+
         
 
 
 
-    private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -52,8 +64,19 @@ namespace histogramAforge
                 imageSecond.Save("imageSecond.bmp");
                 GraphicProcessing graphicProcesing = new GraphicProcessing();
                 CharactersList = graphicProcesing.ProcesImage(imageSecond);
+                LoadCharacterToView();
 
 
+            }
+        }
+
+        private void LoadCharacterToView()
+        {
+            int i = 0;
+            foreach(Bitmap map in CharactersList)
+            {
+                pictureBoxList[i].Image = map;
+                i++;
             }
         }
 
@@ -89,6 +112,11 @@ namespace histogramAforge
         {
             PlateNoOcr plateOCR = PlateNoOcr.Instance;
             plateOCR.LoadSerializedNetwork();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
