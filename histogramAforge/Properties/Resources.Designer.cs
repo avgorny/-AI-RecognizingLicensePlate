@@ -63,6 +63,16 @@ namespace histogramAforge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap learningAll {
+            get {
+                object obj = ResourceManager.GetObject("learningAll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap learningmatrix {
             get {
                 object obj = ResourceManager.GetObject("learningmatrix", resourceCulture);

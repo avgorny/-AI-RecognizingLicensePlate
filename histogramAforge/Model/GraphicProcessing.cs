@@ -194,5 +194,102 @@ namespace histogramAforge.Model
             }
             
         }
+
+        public List<Bitmap> ProcesLearningImage(Bitmap WhieteAndBlackImage)
+        {
+            int startX = 0;
+            while (startX < WhieteAndBlackImage.Width)
+            {
+
+                startX = CreateCutedLeraningCharacters(WhieteAndBlackImage, startX);
+
+            }
+            List<Bitmap> buff = bufferForResult;
+            bufferForResult = null;
+            return buff;
+
+        }
+
+
+        /// <summary>
+        /// This metod is croping an image basis on white and balck pixels.
+        /// At first it is looking for black pixels around 10% of column.
+        /// If this will be checked then it is looking for an white space min 85% in column
+        /// If both are founded it crops the image.
+        /// </summary>
+        /// <param name="gray"></param>
+        /// <param name="startX"></param>
+        /// <returns></returns>
+        private int CreateCutedLeraningCharacters(Bitmap gray, int startX)
+        {
+            Bitmap myBitmap = new Bitmap(gray);
+            int first = 0;
+            int second = 0;
+            Boolean check = false;
+            Boolean Bcheck = false;
+
+            Boolean setSecond = false;
+
+            for (int x = startX; x < myBitmap.Width; x++)
+            {
+                int count = 0;
+                int blackCount = 0;
+
+                for (int y = 0; y < myBitmap.Height; y++)
+                {
+
+                    Color pixelColor = myBitmap.GetPixel(x, y);
+                    //zlicznaie baiłych pikseli
+                    if (pixelColor.R + pixelColor.G + pixelColor.B >= 250)
+                    {
+                        count++;
+                    }
+                    //zliczanie czarnych pikseli
+                    if (pixelColor.R + pixelColor.G + pixelColor.B == 0)
+                    {
+                        blackCount++;
+                    }
+
+                    if (count > myBitmap.Height * 0.95)
+                    {
+                        Bcheck = true;
+                    }
+
+                    if (blackCount >= myBitmap.Height * 0.10 && !check)
+                    {
+                        first = x;
+                        check = true;
+                        break;
+
+                    }
+                    else if (check && Bcheck)
+                    {
+                        second = x;
+                        setSecond = true;
+                    }
+
+
+                }
+
+                if (second != 0)
+                {
+                    break;
+                }
+            }
+            if (second - first >= 8)
+            {
+                Crop filter = new Crop(new Rectangle(first - 2, 0, second - first + 2, myBitmap.Height));
+                Bitmap newImage = filter.Apply(myBitmap);
+                this.saveFile.saveImages(newImage, startX);
+                CreateCharacters(newImage, startX);
+            }
+
+            if (setSecond == false)
+            {
+                return myBitmap.Width;
+            }
+            return second;
+
+        }
     }
 }

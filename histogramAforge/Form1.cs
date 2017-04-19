@@ -96,10 +96,12 @@ namespace histogramAforge
         {
             OcrPlatesResult.Text = " ";
             PlateNoOcr plateOCR = PlateNoOcr.Instance;
-            foreach(Bitmap map in CharactersList)
+            List<int> resultList = new List<int>();
+            foreach (Bitmap map in CharactersList)
             {
-                OcrPlatesResult.Text += plateOCR.OcrImage(map);
+                resultList.Add( plateOCR.OcrImage(map));
             }
+            OcrPlatesResult.Text = plateOCR.CreateFullResult(resultList);
         }
 
         private void saveNetworkToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,6 +114,7 @@ namespace histogramAforge
         {
             PlateNoOcr plateOCR = PlateNoOcr.Instance;
             plateOCR.LoadSerializedNetwork();
+            teachStatuslabel.Text = "Loaded from file";
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

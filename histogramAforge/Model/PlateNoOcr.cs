@@ -25,6 +25,8 @@ namespace ocr
         //field for network
         private AForge.Neuro.ActivationNetwork Network;
 
+        private Dictionary<int, char> resultDictionary = new Dictionary<int, char>();
+
         public PlateNoOcr()
         {
 
@@ -179,9 +181,9 @@ namespace ocr
         public int init()
         {
             double[][] learningData = CreateLearningMatrix();
-            double[][] outputs = CreateExpectedResult(learningData);
-            
+            double[][] outputs = CreateExpectedResult(learningData);            
             patterns = learningData.GetLength(0);
+            
             AForge.Neuro.ActivationNetwork neuralNet =
                 new AForge.Neuro.ActivationNetwork(new AForge.Neuro.BipolarSigmoidFunction(1.0), patternSize, patterns, patterns, patterns);
             // randomize network`s weights
@@ -203,12 +205,12 @@ namespace ocr
                 Console.WriteLine(error);
                 i++;
             }
-            while (error > 0.1);
+            while (error > 0.5);
             Network = neuralNet;
             return i;   
         }
 
-        public String OcrImage(Bitmap mBitmap)
+        public int OcrImage(Bitmap mBitmap)
         {
                                    
             CreteInputMatrix(mBitmap);
@@ -226,7 +228,7 @@ namespace ocr
                     maxIndex = j;
                 }
             }
-            return maxIndex.ToString();
+            return maxIndex;
            
         }
 
@@ -242,9 +244,11 @@ namespace ocr
             List<PointsStartEnd> PointsList = CreatePointsTable(mBitmap);
             foreach (PointsStartEnd pointSet in PointsList)
             {
-
-                result[i] = CountBlackWhite(pointSet, mBitmap);
-                i++;
+                if (i < 35)
+                {
+                    result[i] = CountBlackWhite(pointSet, mBitmap);
+                    i++;
+                }
 
             }
             return result;
@@ -318,13 +322,13 @@ namespace ocr
             GraphicProcessing graph = new GraphicProcessing();
             Bitmap mBitmap;
 
-            System.Drawing.Image img = histogramAforge.Properties.Resources.learningmatrix;
+            System.Drawing.Image img = histogramAforge.Properties.Resources.learningAll;
             mBitmap = new Bitmap(img);
             Grayscale greyScaleFilter = new Grayscale(1.0, 0.0, 0.0);
             mBitmap = greyScaleFilter.Apply(mBitmap);
             Threshold tresholdFilter = new Threshold(120);
             tresholdFilter.ApplyInPlace(mBitmap);
-            List<Bitmap> listOfCharacters = graph.ProcesImage(mBitmap);
+            List<Bitmap> listOfCharacters = graph.ProcesLearningImage(mBitmap);
             //crate input matrix for each character to learn NN
             double[][] learnigTable = new double[listOfCharacters.Count][];
             int i = 0;
@@ -367,6 +371,42 @@ namespace ocr
             return expectedOutputs;
         }
 
+
+        /// <summary>
+        /// This metod create dictinary with key with output value and as key and char ASCII as value
+        /// </summary>
+        /// <param name="amountOfOutputs"></param>
+        private void CreateDictionary(int amountOfOutputs)
+        {
+            int character = 48; // 0 ASCII in decimal
+            for(int i=0; i<amountOfOutputs; i++)
+            {
+                if(character<58)
+                {
+                    resultDictionary.Add(i, (char)character);
+                }else
+                {
+                    if (character == 81-7)
+                    {
+                        character++;
+                    }                        
+                    resultDictionary.Add(i, (char)(character+7));
+                }
+                character++;
+            }
+        }
+
+        public string CreateFullResult(List<int> neuralOutputs)
+        {
+            if(resultDictionary.Count<10)
+                CreateDictionary(patternSize);
+            string result="";
+            for(int i=0;i<neuralOutputs.Count;i++)
+            {
+                result += resultDictionary[neuralOutputs[i]];
+            }
+            return result;
+        }
 
         #region serialization
         /// <summary>
