@@ -10,19 +10,20 @@ using System.Runtime.InteropServices;
 using histogramAforge.Model;
 using System.IO;
 using System.Xml.Serialization;
+using AForge.Imaging.Filters;
 
 namespace ocr
 {
     public class PlateNoOcr
     {
-
+        //instance of singelton
         private static PlateNoOcr instance;
         // pattern size
         private int patternSize = 35;
         // patterns count
         private int patterns = 9;
-        //
-        AForge.Neuro.ActivationNetwork Network;
+        //field for network
+        private AForge.Neuro.ActivationNetwork Network;
 
         public PlateNoOcr()
         {
@@ -44,7 +45,7 @@ namespace ocr
 
 
 
-
+        #region manual lerning data
         // learning input vectors
         double[][] input = new double[9][]
         {
@@ -169,10 +170,20 @@ namespace ocr
 
             },
         };
+        #endregion
+
+        /// <summary>
+        /// This method learn NN how to ocr basis on fileds placed in cals fields 
+        /// </summary>
+        /// <returns>Amount of learning cycles</returns>
         public int init()
         {
+            double[][] learningData = CreateLearningMatrix();
+            double[][] outputs = CreateExpectedResult(learningData);
+            
+            patterns = learningData.GetLength(0);
             AForge.Neuro.ActivationNetwork neuralNet =
-                new AForge.Neuro.ActivationNetwork(new AForge.Neuro.BipolarSigmoidFunction(0.5), patternSize, patterns, patterns);
+                new AForge.Neuro.ActivationNetwork(new AForge.Neuro.BipolarSigmoidFunction(1.0), patternSize, patterns, patterns, patterns);
             // randomize network`s weights
             neuralNet.Randomize();
 
@@ -180,23 +191,21 @@ namespace ocr
             AForge.Neuro.Learning.BackPropagationLearning teacher = new AForge.Neuro.Learning.BackPropagationLearning(neuralNet);
             teacher.Momentum = 0.2f;
             teacher.LearningRate = 0.55f;
-            
-            
+                        
             // teach the network
             int i = 0;
             Random rand = new Random();
             double error;
             do
-            {            
-                error = teacher.RunEpoch(input, output);
+            {
+                //error = teacher.RunEpoch(input, output);
+                error = teacher.RunEpoch(learningData, outputs);
                 Console.WriteLine(error);
                 i++;
             }
             while (error > 0.1);
             Network = neuralNet;
-            return i;
-            //
-            
+            return i;   
         }
 
         public String OcrImage(Bitmap mBitmap)
@@ -221,6 +230,11 @@ namespace ocr
            
         }
 
+        /// <summary>
+        /// This method creat table with floats [0,1] 0-black 1-white
+        /// </summary>
+        /// <param name="mBitmap"></param>
+        /// <returns>table of values from range [0,1]</returns>
         private double[] CreteInputMatrix(Bitmap mBitmap)
         {
             double[] result = new double[35];
@@ -230,11 +244,17 @@ namespace ocr
             {
 
                 result[i] = CountBlackWhite(pointSet, mBitmap);
+                i++;
 
             }
             return result;
         }
 
+        /// <summary>
+        /// This method determine latice (siatke) on character image
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns>list of points with first and last Point from space</returns>
         private List<PointsStartEnd> CreatePointsTable(Bitmap img)
         {
             List<PointsStartEnd> list = new List<PointsStartEnd>();
@@ -260,6 +280,7 @@ namespace ocr
 
             return list;
         }
+
 
         private double CountBlackWhite(PointsStartEnd pointSet, Bitmap bitMap)
         {
@@ -287,30 +308,70 @@ namespace ocr
             int width = pointSet.end.X - pointSet.strat.X;
             int content = height * width;
             result = (double)blackCount / (double)content;
-            //if (result >0.4)
-            //{
-            //    result = 1;
-            //}else
-            //{
-            //    result = 0;
-            //}
             return result;
         }
 
-        private void CreateLearningMatrix()
+
+        private double[][] CreateLearningMatrix()
         {
+            //loading and cuting learning matrix for each character
             GraphicProcessing graph = new GraphicProcessing();
             Bitmap mBitmap;
-            using (Stream BitmapStream = System.IO.File.OpenRead("\\LearningPictures\\learningmatrix.png"))
+
+            System.Drawing.Image img = histogramAforge.Properties.Resources.learningmatrix;
+            mBitmap = new Bitmap(img);
+            Grayscale greyScaleFilter = new Grayscale(1.0, 0.0, 0.0);
+            mBitmap = greyScaleFilter.Apply(mBitmap);
+            Threshold tresholdFilter = new Threshold(120);
+            tresholdFilter.ApplyInPlace(mBitmap);
+            List<Bitmap> listOfCharacters = graph.ProcesImage(mBitmap);
+            //crate input matrix for each character to learn NN
+            double[][] learnigTable = new double[listOfCharacters.Count][];
+            int i = 0;
+            
+            foreach (Bitmap map in listOfCharacters)
             {
-                System.Drawing.Image img = System.Drawing.Image.FromStream(BitmapStream);
-                mBitmap = new Bitmap(img);
+                learnigTable[i] = CreteInputMatrix(map);
+                i++;
             }
-            graph.ProcesImage(mBitmap);
-
-
+            
+            return learnigTable;
         }
 
+        /// <summary>
+        /// Create expected outputs basis on learning data
+        /// </summary>
+        /// <param name="learningTable"></param>
+        private double[][] CreateExpectedResult(double[][] learningTable)
+        {
+            //first dimension size
+            int size1 = learningTable.GetLength(0);            
+            double[][] expectedOutputs = new double[size1][];
+            
+            for(int index = 0; index<size1;index++)
+            {
+                expectedOutputs[index] = new double[size1];
+            }
+            for(int i = 0; i<size1 ;i++)
+                for(int j = 0; j<size1; j++)
+                {
+                    if(i==j)
+                    {
+                        expectedOutputs[i][j] = 1;
+                    }else
+                    {
+                        expectedOutputs[i][j] = 0;
+                    }
+                    
+                }
+            return expectedOutputs;
+        }
+
+
+        #region serialization
+        /// <summary>
+        /// This method is saving learned NN from this class to binary file 
+        /// </summary>
         public void SerializeNetwork()
         {          
             try
@@ -332,6 +393,9 @@ namespace ocr
             }
         }
 
+        /// <summary>
+        /// This method is Loading saved and teached NN 
+        /// </summary>
         public void LoadSerializedNetwork()
         {
             try
@@ -353,8 +417,8 @@ namespace ocr
                 Console.WriteLine("Aplikacja wygenerowała następujący wyjątek: " + oException.Message);
             }
         }
-
+        #endregion
     }
-        // create neural network
-       
+
+
 }

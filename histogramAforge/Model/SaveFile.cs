@@ -14,7 +14,7 @@ namespace histogramAforge.Model
 
         public SaveFile()
         {
-            FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
+            FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();            
             DialogResult result = folderBrowserDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
